@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=huisdierNaam
+comment0.target=Huisdier(java.lang.String)
+comment1.params=nieuweSoort
+comment1.target=void\ kenSoortToe(java.lang.String)
+comment2.params=nieuweLeeftijd
+comment2.target=void\ kenLeeftijdToe(int)
+comment3.params=nieuweEigenaar
+comment3.target=void\ kenEigenaarToe(Eigenaar)
+comment4.params=
+comment4.target=void\ toonNaam()
+comment5.params=
+comment5.target=void\ toonEigenaarsGegegevens()
+numComments=6

@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.params=setName
+comment0.target=Eigenaar(java.lang.String)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Eigenaar\n
+comment1.params=nieuweNaam
+comment1.target=void\ wijzigNaam(java.lang.String)
+comment2.params=nieuweLeeftijd
+comment2.target=void\ wijzigLeeftijd(int)
+comment3.params=nieuwGeslacht
+comment3.target=void\ wijzigGeslacht(char)
+comment4.params=
+comment4.target=void\ toonLeeftijd()
+comment5.params=
+comment5.target=void\ toonEigenaarGegevens()
+numComments=6
