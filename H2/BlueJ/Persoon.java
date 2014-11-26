@@ -92,7 +92,7 @@ public class Persoon
         return aantal;
     }
     
-    void drukGroepen(int aantalInGroep)
+    static void drukGroepen(int aantalInGroep)
     {
         int groepen = aantal/aantalInGroep;
         if (aantalInGroep*groepen < aantal) { //5*1=5 < 7 -> aantal + 1
@@ -100,7 +100,7 @@ public class Persoon
         }
         
         if (groepen == 1) {
-            System.out.println("Er is " +  groepen + "groep");
+            System.out.println("Er is " +  groepen + " groep");
         } else {
             System.out.println("Er zijn " +  groepen + "groepen");
         }
