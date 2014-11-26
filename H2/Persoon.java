@@ -1,28 +1,27 @@
-
-/** 
- * Maak een nieuw project aan in BlueJ (“Voorbeeldoef”).
- * Maak hierin een klasse “Persoon”, met volgende velden: voornaam, naam, gemeente, lengte (in m), gewicht (in kg), leeftijd.
- */
 public class Persoon
 {
     private int x;
     String voornaam, naam, gemeente;
     int gewicht, leeftijd;
     double lengte;
+    static int aantal; //static = niveau van klasse, wijzigt voor alles = aanroepen via klasse
+                       //non-static = niveau van object, wijzigt voor ieder object = aanroepen via 
+    public Persoon (){
+        ++aantal;
+    } 
     public Persoon(String voornaamN, String naamN)
     {
         voornaam = voornaamN;
         naam = naamN;
+        ++aantal;
     }
     
     public Persoon(int leeftijd){
         this.leeftijd = leeftijd; // this.leeftijd slaat op de var leeftijd van de class
         voornaam = "Onbekend";
         naam = "Onbekend";
+        ++aantal;
     }
-    
-    public Persoon (){
-    } 
 
     void wijzigVoornaam(String nieuweVN)
     {
@@ -86,6 +85,26 @@ public class Persoon
     void groei(int cm)
     {
         lengte += cm/100.0;
+    }
+
+    static int toonAantal()
+    {
+        return aantal;
+    }
+    
+    void drukGroepen(int aantalInGroep)
+    {
+        int groepen = aantal/aantalInGroep;
+        if (aantalInGroep*groepen < aantal) { //5*1=5 < 7 -> aantal + 1
+        groepen++;
+        }
+        
+        if (groepen == 1) {
+            System.out.println("Er is " +  groepen + "groep");
+        } else {
+            System.out.println("Er zijn " +  groepen + "groepen");
+        }
+        
     }
 }
 

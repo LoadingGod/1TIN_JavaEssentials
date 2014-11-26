@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=voornaamN\ naamN
 comment0.target=Persoon(java.lang.String,\ java.lang.String)
-comment1.params=leeftijdN
+comment1.params=leeftijd
 comment1.target=Persoon(int)
 comment10.params=
 comment10.target=java.lang.Double\ geefLengte()
@@ -13,6 +13,10 @@ comment13.params=
 comment13.target=void\ groei()
 comment14.params=cm
 comment14.target=void\ groei(int)
+comment15.params=
+comment15.target=int\ toonAantal()
+comment16.params=aantalInGroep
+comment16.target=void\ drukGroepen(int)
 comment2.params=
 comment2.target=Persoon()
 comment3.params=nieuweVN
@@ -29,4 +33,4 @@ comment8.params=nieuweLengte
 comment8.target=void\ wijzigLengte(double)
 comment9.params=
 comment9.target=java.lang.String\ geefVoornaam()
-numComments=15
+numComments=17
