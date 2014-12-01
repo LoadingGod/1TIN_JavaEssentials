@@ -22,7 +22,7 @@ public class GSM {
 	}
 
 	void toonGSM() {
-		if (gsmNummer == null) {
+		if (merk == null && gsmNummer == null) {
 			System.out
 					.println("Dit is een leeg object en heeft geen eigen waarden voor zijn datamembers!");
 		} else {
