@@ -21,20 +21,23 @@ public class Bankrekening {
 		} else {
 			this.pincode = 0000;
 		}
-		this.statusrekening = 0;
+		statusrekening = 0;
 	}
 
 	public void stortOp(int pincode, double bedrag) {
 		if (checkPinBlock(pincode) == true) {
-			this.saldo += bedrag;
-			this.statusrekening = 1;
+			saldo += bedrag;
+			statusrekening = 1;
 		}
 	}
 
 	public void haalAf(int pincode, double bedrag) {
 		if (checkPinBlock(pincode) == true) {
-			this.saldo -= bedrag;
-			this.statusrekening = 1;
+			saldo -= bedrag;
+			if (saldo < -1500) {
+				saldo = -1500;
+			}
+			statusrekening = 1;
 		}
 	}
 
