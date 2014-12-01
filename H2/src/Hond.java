@@ -17,10 +17,11 @@ public class Hond {
 		this.naam = naam;
 		if (chip.length() == 15) {
 			for (int i = 0; i <= 14; i++) {
-				if (Character.isDigit(chip.charAt(0))) {
+				if (Character.isDigit(chip.charAt(i))) {
 					this.chip += chip.charAt(i);
 				} else {
 					System.out.println("Foutief ISO-Nummer!");
+					break;
 				}
 			}
 		} else {
@@ -44,10 +45,11 @@ public class Hond {
 	public void setChip(String chip) {
 		if (chip.length() == 15) {
 			for (int i = 0; i <= 14; i++) {
-				if (Character.isDigit(chip.charAt(0))) {
+				if (Character.isDigit(chip.charAt(i))) {
 					this.chip += chip.charAt(i);
 				} else {
 					System.out.println("Foutief ISO-Nummer!");
+					break;	// uit loop gaan wanneer char geen digit is
 				}
 			}
 		} else {
