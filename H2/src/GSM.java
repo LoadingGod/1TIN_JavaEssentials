@@ -1,27 +1,27 @@
 public class GSM {
-	String gsmNummer;
-	int bouwjaar, krediet, meterbatterij;
-	String merk, naamEigenaar, voornaamEigenaar;
+	private String gsmNummer;
+	private int bouwjaar, krediet, meterbatterij;
+	private String merk, naamEigenaar, voornaamEigenaar;
 	static int aantal;
 	
-	public GSM(String merk, String gsmNummer) {
+	GSM(String merk, String gsmNummer) {
 		this.gsmNummer = gsmNummer;
 		this.merk = merk;
 		++aantal;
 	}
 
-	public GSM(String merk, String gsmNummer, int meterbatterij) {
+	GSM(String merk, String gsmNummer, int meterbatterij) {
 		this.gsmNummer = gsmNummer;
 		this.merk = merk;
 		this.meterbatterij = meterbatterij;
 		++aantal;
 	}
 
-	public GSM() {
+	GSM() {
 		++aantal;
 	}
 
-	void toonGSM() {
+	public void toonGSM() {
 		if (merk == null && gsmNummer == null) {
 			System.out
 					.println("Dit is een leeg object en heeft geen eigen waarden voor zijn datamembers!");

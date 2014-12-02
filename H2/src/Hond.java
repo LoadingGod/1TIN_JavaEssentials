@@ -1,14 +1,14 @@
 
 public class Hond {
-	String grootte, naam, chip, activiteit;
+	private String grootte, naam, chip, activiteit;
 //default constructor
 	
-	public Hond() {		
+	Hond() {		
 	}
 
 //constructor w/ parameters
 	
-	public Hond( int grootte, String naam, String chip, String activiteit) { 
+	Hond( int grootte, String naam, String chip, String activiteit) { 
 		if (grootte < 70) {
 			this.grootte = "klein";
 		} else {

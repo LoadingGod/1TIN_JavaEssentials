@@ -45,7 +45,7 @@ public class Datum {
 		this.jaar = jaar;
 	}
 	
-	public public String toString() {
+	public String toString() {
 		return dag + "/" + maand + "/" + jaar;
 	}
 	
