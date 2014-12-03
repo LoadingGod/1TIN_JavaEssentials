@@ -6,9 +6,9 @@ public class TestStad {
 		Persoon p1 = new Persoon("Habraken", "Hans");
 		Stad s1 = new Stad("Hasselt", 80000, p1);
 		Stad s2 = new Stad("Genk", 55000, new Persoon());
-		Stad s3 = new Stad("Hoeselt", 28000, new Persoon("Philips", "Brecht"));
+		Stad s3 = new Stad("Hoeselt", 38000, new Persoon("Philips", "Brecht"));
 		String burgNaam = s1.getBurgemeester().getNaam();
-		s2.getBurgemeester().getNaam();
+		s2.getBurgemeester().setNaam("Henkens");
 		s3.setBurgemeester(new Persoon());
 		s1.drukStadsGegevens();
 		s2.drukStadsGegevens();
