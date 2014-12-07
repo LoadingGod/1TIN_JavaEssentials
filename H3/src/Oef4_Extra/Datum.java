@@ -1,3 +1,5 @@
+package Oef4_Extra;
+
 public class Datum {
 	int dag, maand, jaar;
 	
@@ -49,5 +51,11 @@ public class Datum {
 	
 	public void toon() {
 		System.out.println(this.toString());
+	}
+	
+	public void setDatum(int dag, int maand, int jaar){
+		this.dag = dag;
+		this.maand = maand;
+		this.jaar = jaar;
 	}
 }

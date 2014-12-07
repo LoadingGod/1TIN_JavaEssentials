@@ -39,6 +39,7 @@ public class EigenaarGebouwen {
 					+ a.getHuisnr() + " " + a.getGemeente() + " {"
 					+ gebouwen[index].getFunctie() + " "
 					+ gebouwen[index].getOpp() + "}");
+			index++;
 		}
 	}
 	
