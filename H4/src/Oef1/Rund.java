@@ -1,4 +1,4 @@
-package voorbeeld;
+package Oef1;
 
 public class Rund extends Dier {
 

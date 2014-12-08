@@ -1,8 +1,8 @@
 package voorbeeld;
 
 public class Dier {
-	private String soort, voedselType;
-	private int geboorteJaar;
+	protected String soort, voedselType;
+	protected int geboorteJaar;
 
 	public Dier(String soort, String voedselType) {
 		this.soort = soort;

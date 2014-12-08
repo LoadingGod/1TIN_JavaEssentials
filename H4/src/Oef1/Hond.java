@@ -1,4 +1,4 @@
-package voorbeeld;
+package Oef1;
 public class Hond extends Dier {
 	private String naam;
 	private String ras;
@@ -14,11 +14,7 @@ public class Hond extends Dier {
 		this.ras = ras;
 	}
 	public String toString() {
-      	return "Dit is een " + soort + "- het is " + naam + " de " + ras;
+      	return super.toString() + " - het is " + naam + " de " + ras;
   	}
-	
-	public void makeSound() {
-		System.out.println("woef woef");
-	}
 
 }
