@@ -18,14 +18,16 @@ public class Dier {
 	}
 	
 	private void checkVoedselType() {
-		if (voedselType.charAt(0) == 'h' || voedselType.charAt(0) == 'H') {
-			this.voedselType = "Herbivoor";
-		} else if (voedselType.charAt(0) == 'c' || voedselType.charAt(0) == 'C') {
-			this.voedselType = "Carnivoor";
-		} else {
-			this.voedselType = "Onbekend";
+		this.voedselType = "Onbekend";
+		if (voedselType != null && voedselType.length() > 0) {
+			if (voedselType.toLowerCase().charAt(0) == 'h') {
+				this.voedselType = "Herbivoor";
+			} else if (voedselType.toLowerCase().charAt(0) == 'c') {
+				this.voedselType = "Carnivoor";
+			} else if (voedselType.toLowerCase().charAt(0) == 'ó') {
+				this.voedselType = "Omnivoor";
+			}
 		}
-		
 	}
 	
  	public String toString() {
