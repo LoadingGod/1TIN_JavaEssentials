@@ -17,7 +17,7 @@ public class TestBoek {
 		b1.toonBoekGegevens();
 		b2.toonBoekGegevens();
 		System.out.println("Titel van de boek 2" + b2.getTitel());
-		Boek b3 = new Boek();
+		Boek b3=new Boek("0-9999-9999-9","BlaBlaBla", "Frankie Claessens",2780);
 		System.out.println("Aantal Bladzijden: " + b1.getBladzijden() + b2.getBladzijden() + b3.getBladzijden());
 		toonHoofdLetters(b3.getSchrijver());
 	}
