@@ -1,6 +1,6 @@
 package Oef01;
 
-public class Achtergrond implements TekenObject{
+public class Achtergrond extends TekenObject{
 	private String kleur;
 	private boolean doorschijnend;
 	

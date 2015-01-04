@@ -1,6 +1,6 @@
 package Oef01;
 
-public abstract class GrafischElement implements TekenObject, Herschaalbaar {
+public abstract class GrafischElement extends TekenObject implements Herschaalbaar {
 	private double x, y;
 
 	public GrafischElement(double x, double y) {

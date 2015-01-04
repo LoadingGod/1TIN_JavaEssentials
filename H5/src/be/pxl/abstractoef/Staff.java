@@ -51,7 +51,7 @@ class Staff extends Person
 
 	@Override
 	void printAll() {
-		// TODO Auto-generated method stub
+		System.out.println(super.getName() + "\n"+ super.getYearOfBirth() + "\n"+ room);
 		
 	}
     
