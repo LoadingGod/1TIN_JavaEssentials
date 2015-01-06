@@ -14,7 +14,7 @@ public class Oef04 {
 		
 		for (int rij = 0; rij < 3; rij++) {
 			for (int kolom = 0; kolom < 5; kolom++) {
-				if (a[rij][kolom] < grootst) {
+				if (a[rij][kolom] > grootst) {
 					grootst = a[rij][kolom];
 				}
 			}
