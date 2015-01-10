@@ -1,3 +1,4 @@
+package Oef03;
 public class Gast
 {
     private int nummer;

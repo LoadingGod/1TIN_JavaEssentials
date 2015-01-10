@@ -1,3 +1,4 @@
+package Oef03;
 
 public class Kamer {
 	private String nummer;
@@ -49,6 +50,16 @@ public class Kamer {
 
 	public void setGast(Gast gast) {
 		this.gast = gast;
+		
+	}
+	
+	@Override
+	public boolean equals(Object object) {
+		if (object instanceof Kamer && ((Kamer) object).nummer.equals(this.nummer)){
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }
