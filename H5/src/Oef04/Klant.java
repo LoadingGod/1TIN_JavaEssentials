@@ -21,4 +21,5 @@ public class Klant extends Persoon implements Controleer {
 	public void drukGegevens() {
 		System.out.println("\nKlant\nNaam: " + super.getNaam() + "\nGeboren in: " + super.getGebJaar() + "\nKlantcode: " + this.klantCode + "\nBedrag gekocht: " + this.bedragGekocht);
 	}
+
 }
