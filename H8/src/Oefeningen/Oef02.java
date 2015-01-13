@@ -4,6 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,20 +16,13 @@ import javax.swing.SwingConstants;
 
 public class Oef02 extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 6073372069261168892L;
 	private JPanel hoofdPaneel, nummerPaneel, callPaneel;
 	private JTextField nummer;
 	private JLabel callTxt;
 	private JButton btnCall, btnCallOK;
-	private JButton field1, field2, field3, field4, field5, field6, field7,
-			field8, field9, field10, field11, field12;
-	private JButton[] velden = { field1, field2, field3, field4, field5,
-			field6, field7, field8, field9, field10, field11, field12 };
-	private String[] tekens = { "1", "2", "3", "4", "5", "6", "7", "8", "9",
-			"*", "0", "#" };
+	private ArrayList<String> tekens = new ArrayList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "0", "#"));
+	private ArrayList<JButton> buttons = new ArrayList<JButton>();
 
 	public Oef02() {
 		super("Telefoonkiezer");
@@ -46,16 +41,17 @@ public class Oef02 extends JFrame {
 		hoofdPaneel.add(nummerPaneel, BorderLayout.CENTER);
 		hoofdPaneel.add(btnCall, BorderLayout.SOUTH);
 
-		for (int i = 0; i < velden.length; i++) {
-			velden[i] = new JButton(tekens[i]);
-			nummerPaneel.add(velden[i]);
-			velden[i].addActionListener(new clickHandler());
+		for (int i = 0; i < tekens.size(); i++) {
+			buttons.add(new JButton(tekens.get(i)));
+			nummerPaneel.add(buttons.get(i));
+			buttons.get(i).addActionListener(new clickHandler());
 		}
 
 		btnCall.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				btnCall.setVisible(false);
 				nummerPaneel.setVisible(false);
 				callTxt.setText("Het gekozen nummer " + nummer.getText()
 						+ " wordt gebeld!");
@@ -63,13 +59,14 @@ public class Oef02 extends JFrame {
 
 			}
 		});
-		
+
 		btnCallOK.addActionListener(new ActionListener() {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				hoofdPaneel.remove(callPaneel);
 				nummerPaneel.setVisible(true);
+				btnCall.setVisible(true);
 
 			}
 		});
