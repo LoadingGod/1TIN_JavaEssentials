@@ -2,7 +2,6 @@ package Oefeningen;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -12,13 +11,15 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.text.JTextComponent;
 
 public class Opdracht07 extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8272723305599352045L;
 	private JPanel hoofdPaneel, linkerPaneel, middenPaneel, taalKnoppen,
 			functieKnoppen;
 	private JButton btnBold, btnItalic, btnPlain, btnExit, btnNederlands,
@@ -38,21 +39,21 @@ public class Opdracht07 extends JFrame {
 		hoofdPaneel.add(linkerPaneel, BorderLayout.WEST);
 		hoofdPaneel.add(middenPaneel, BorderLayout.CENTER);
 		hoofdPaneel.add(txtSouth, BorderLayout.SOUTH);
-		linkerPaneel.setBackground(Color.BLACK);
+		linkerPaneel.setBackground(Color.GRAY);
 		linkerPaneel.setOpaque(true);
-		functieKnoppen.setBackground(Color.BLACK);
+		functieKnoppen.setBackground(Color.GRAY);
 		functieKnoppen.setOpaque(true);
-		middenPaneel.setBackground(Color.BLACK);
+		middenPaneel.setBackground(Color.GRAY);
 		middenPaneel.setOpaque(true);
-		taalKnoppen.setBackground(Color.BLACK);
+		taalKnoppen.setBackground(Color.GRAY);
 		taalKnoppen.setOpaque(true);
-		txtSouth.setBackground(Color.BLACK);
-		txtSouth.setForeground(Color.PINK);
+		txtSouth.setBackground(Color.GRAY);
+		txtSouth.setForeground(Color.BLACK);
 		groteLabel = new JLabel("Goede morgen!");
 		groteLabel.setVerticalAlignment(SwingConstants.CENTER);
 		groteLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		groteLabel.setBackground(Color.BLACK);
-		groteLabel.setForeground(Color.PINK);
+		groteLabel.setBackground(Color.DARK_GRAY);
+		groteLabel.setForeground(Color.WHITE);
 		groteLabel.setOpaque(true);
 		btnBold = new JButton("Bold");
 		btnItalic = new JButton("Italic");
