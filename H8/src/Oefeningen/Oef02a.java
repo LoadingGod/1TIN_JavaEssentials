@@ -49,7 +49,7 @@ public class Oef02a extends JFrame {
 		for (int i = 0; i < velden.length; i++) {
 			velden[i] = new JButton(tekens[i]);
 			nummerPaneel.add(velden[i]);
-			velden[i].addActionListener(new clickHandler());
+			velden[i].addActionListener(new ClickHandler());
 		}
 
 		btnCall.addActionListener(new ActionListener() {
@@ -84,7 +84,7 @@ public class Oef02a extends JFrame {
 		new Oef02a();
 	}
 
-	public class clickHandler implements ActionListener {
+	public class ClickHandler implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {

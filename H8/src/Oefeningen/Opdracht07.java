@@ -26,6 +26,7 @@ public class Opdracht07 extends JFrame {
 			btnFrans, btnItaliaans, btnEngels;
 	private JTextField txtSouth;
 	private JLabel groteLabel;
+	private String taal, opmaakTekst;
 
 	public Opdracht07() {
 		super("Mini Travel Program");
@@ -50,6 +51,8 @@ public class Opdracht07 extends JFrame {
 		txtSouth.setBackground(Color.GRAY);
 		txtSouth.setForeground(Color.BLACK);
 		groteLabel = new JLabel("Goede morgen!");
+		taal = "Nederlands";
+		opmaakTekst = "BOLD";
 		groteLabel.setVerticalAlignment(SwingConstants.CENTER);
 		groteLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		groteLabel.setBackground(Color.DARK_GRAY);
@@ -86,6 +89,8 @@ public class Opdracht07 extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				groteLabel.setText("Goede morgen!");
+				taal = e.getActionCommand();
+				updateTextVeld();
 			}
 		});
 		
@@ -94,7 +99,8 @@ public class Opdracht07 extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				groteLabel.setText("Bonjour!");
-				
+				taal = e.getActionCommand();
+				updateTextVeld();
 			}
 		});
 		
@@ -103,7 +109,8 @@ public class Opdracht07 extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				groteLabel.setText("Bongiorno!");
-				
+				taal = e.getActionCommand();
+				updateTextVeld();
 			}
 		});
 		
@@ -112,7 +119,8 @@ public class Opdracht07 extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				groteLabel.setText("Good morning!");
-				
+				taal = e.getActionCommand();
+				updateTextVeld();
 			}
 		});
 		
@@ -122,6 +130,10 @@ public class Opdracht07 extends JFrame {
 	public static void main(String[] args) {
 		new Opdracht07();
 	}
+	
+	private void updateTextVeld() {
+		txtSouth.setText(taal + " "+ opmaakTekst);
+	}
 
 	public class FontHandler implements ActionListener {
 
@@ -129,12 +141,14 @@ public class Opdracht07 extends JFrame {
 
 		public FontHandler(int stijl) {
 			this.STIJL = stijl;
+			
 		}
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			groteLabel.setFont(groteLabel.getFont().deriveFont(STIJL));
-
+            opmaakTekst = e.getActionCommand();
+            updateTextVeld();
 		}
 
 	}

@@ -44,7 +44,7 @@ public class Oef02b extends JFrame {
 		for (int i = 0; i < tekens.size(); i++) {
 			buttons.add(new JButton(tekens.get(i)));
 			nummerPaneel.add(buttons.get(i));
-			buttons.get(i).addActionListener(new clickHandler());
+			buttons.get(i).addActionListener(new ClickHandler());
 		}
 
 		btnCall.addActionListener(new ActionListener() {
@@ -81,7 +81,7 @@ public class Oef02b extends JFrame {
 		new Oef02b();
 	}
 
-	public class clickHandler implements ActionListener {
+	public class ClickHandler implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
