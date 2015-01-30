@@ -35,6 +35,7 @@ public class Oef05 extends JFrame{
 		btnDruk = new JButton("Druk");
 		rBtnMan = new JRadioButton("M");
 		rBtnMan.setSelected(true);
+		geslachtText = "Man";
 		rBtnVrouw = new JRadioButton("V");
 		naam = new JTextField();
 		klas = new Choice();

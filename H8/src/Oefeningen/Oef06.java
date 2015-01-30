@@ -25,10 +25,10 @@ public class Oef06 extends JFrame {
 			for (int kolom = 0; kolom < panelen[rij].length; kolom++) {
 				panelen[rij][kolom] = new JPanel();
 				checkboxes[rij][kolom] = new JCheckBox("" + chkName++);
-				checkboxes[rij][kolom].setOpaque(false);
 				panelen[rij][kolom].add(checkboxes[rij][kolom]);
 				hoofdPaneel.add(panelen[rij][kolom]);
 				checkboxes[rij][kolom].addActionListener(new ClickHandler());
+				panelen[rij][kolom].setOpaque(true);
 			}
 		}
 		setSize(500, 500);
@@ -48,12 +48,10 @@ public class Oef06 extends JFrame {
 					if (checkboxes[rij][kolom].getText()
 							.equals(chkbx.getText()) && chkbx.isSelected()) {
 						kleur = Color.red;
-						panelen[rij][kolom].setOpaque(true);
 						panelen[rij][kolom].setBackground(kleur);
 					} else if (checkboxes[rij][kolom].getText()
 							.equals(chkbx.getText()) && !chkbx.isSelected()){
 						kleur = UIManager.getColor(hoofdPaneel);
-						panelen[rij][kolom].setOpaque(true);
 						panelen[rij][kolom].setBackground(kleur);
 					}
 
