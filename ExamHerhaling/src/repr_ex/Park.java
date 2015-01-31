@@ -8,7 +8,7 @@ public class Park extends Structuur{
 
 	@Override
 	public void beschrijf() {
-		System.out.println("Park gelegen op nummer " + this.nummer.getHuisnummer());
+		System.out.println("Park gelegen op nummer " + super.getNummer().getHuisnummer());
 		
 	}
 

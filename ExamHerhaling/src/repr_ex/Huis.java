@@ -11,8 +11,7 @@ public class Huis extends Structuur {
 
 	@Override
 	public void beschrijf() {
-		System.out.println(this.eigenaar + " woont op nummer " + this.nummer.getHuisnummer());
-		
+		System.out.println(this.eigenaar + " woont op nummer " + super.getNummer().getHuisnummer());
 	}
 
 }

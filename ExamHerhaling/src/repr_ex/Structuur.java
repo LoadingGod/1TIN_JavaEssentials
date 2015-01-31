@@ -2,7 +2,7 @@ package repr_ex;
 
 public abstract class Structuur {
 
-	Huisnummer nummer;
+	private Huisnummer nummer;
 
 	public Structuur(Huisnummer h1) {
 		this.nummer = new Huisnummer(h1);
